@@ -30,18 +30,13 @@ import Navbar from "./Navbar";
 import Contenedor from "./Contenedor";
 import Footer from "./Footer";
 
-
 const Home = () => {
   return (
     <>
       <Navbar />
-      
-
-      <div className="container">
-        
-        <Contenedor />
+      <div className="container"> 
+      <Contenedor />
       </div>
-      
       <Footer />
     </>
   );
