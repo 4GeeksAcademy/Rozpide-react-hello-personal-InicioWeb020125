@@ -1,14 +1,19 @@
 
-import React from 'react'
+
+import React, { useState } from "react";
+import SaberNosotros from "./SaberNosotros";
 
 const OtroNavbar = ()=>{
+    
+    
+    
 
     return (
         <nav className="navbar navbar-expand-lg" style={{ backgroundColor: 'aqua', marginTop: '60px' }}>
             <div className="container-fluid">
-                <a className="navbar-brand" href="src/js/Main2.jsx">
+                <button className="navbar-brand" href="src/js/Main2.jsx">
                 <img src="src/img/imagen NTTN.jpeg" alt="Logo de NTTN" width="50" height="50" className="d-inline-block align-top" />
-                </a>
+                </button>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
