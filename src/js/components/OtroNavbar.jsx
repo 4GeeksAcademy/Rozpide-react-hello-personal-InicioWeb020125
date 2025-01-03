@@ -4,15 +4,16 @@ import React, { useState } from "react";
 import SaberNosotros from "./SaberNosotros";
 
 const OtroNavbar = ()=>{
+    const [opened, setOpened]= useState(true);
     
-    return (
+    return opened?(
+        
         <nav className="navbar navbar-expand-lg" style={{ backgroundColor: 'aqua', marginTop: '60px' }}>
             <div className="container-fluid">
-                <button className="navbar-brand" href="#"><img src="src/img/imagen NTTN.jpeg" alt="Logo de NTTN" width="50" height="50" className="d-inline-block align-top" />
+                <button className="navbar-brand" href="#" onClick={() => setOpened(false)}><img src="src/img/imagen NTTN.jpeg" alt="Logo de NTTN" width="50" height="50" className="d-inline-block align-top" />
                 </button>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                
+                
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
@@ -31,7 +32,12 @@ const OtroNavbar = ()=>{
                 </div>
             </div>
         </nav>
-    );
+    ): (
+        <button type="button" onClick={() => setOpened(true)}>
+          <SaberNosotros/>
+        </button>
+      );
+                
 }
 export default OtroNavbar;
 /*import React from 'react';
